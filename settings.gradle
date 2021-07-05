@@ -1,0 +1,3 @@
+include ':app'
+include ':customLint'
+rootProject.name = "Custom Lint"
