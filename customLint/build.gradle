@@ -4,15 +4,15 @@ plugins {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_7
-    targetCompatibility = JavaVersion.VERSION_1_7
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 ext {
     // The Lint version is strongly tied to the Android Gradle Plugin (AGP) version
     // Add 23 to the major version number of AGP (x in x.y.z)
-    // The project is currently dependent on AGP v4.1.1
-    lintVersion = "27.1.1"
+    // The project is currently dependent on AGP v4.1.1 4.2.1
+    lintVersion = "27.2.2"
 }
 
 dependencies {
@@ -30,8 +30,6 @@ dependencies {
 
 jar {
     manifest {
-        // Format is
-        // attributes("Lint-Registry-v2": "<fully-qualified-class-name-of-your-issue-registry>")
         attributes("Lint-Registry-v2": "com.sierraobryan.example.customlint.LintRegistry")
     }
 }
